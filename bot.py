@@ -36,6 +36,7 @@ async def data_user(client, message: Message):
     username = message.from_user.username
     user_frst_name = message.from_user.first_name
     user_lst_name = message.from_user.last_name
+    
     await message.reply_text(f"__Datos de usuario:__❤️\n**Nombre:** ```{user_frst_name}```\n**Apellido:** ```{user_lst_name}```\n**ID:** ```{user_id}```\n**Username:** ```@{username}```")
 
 
@@ -45,7 +46,8 @@ async def data_other_users(client, message: Message):
     an_user_username = message.forward_from.username
     an_user_frst_name = message.forward_from.first_name
     an_user_lst_name = message.forward_from.last_name
-    await message.reply_text(f"__Datos de usuario:__❤️\n**Nombre:** ```{an_user_frst_name}```\n**Apellido:** ```{an_user_lst_name}```\n**ID:** ```{an_user_id}```\n**Username:** ```@{an_user_username}```")
+    
+    await message.reply_text(f"__Datos de usuario:__❤️\n**Nombre:** ||{an_user_frst_name}||\n**Apellido:** ||{an_user_lst_name}||\n**ID:** ||{an_user_id}||\n**Username:** ||@{an_user_username}||")
         
     return
 
